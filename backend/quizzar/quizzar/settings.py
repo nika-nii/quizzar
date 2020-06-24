@@ -25,7 +25,7 @@ SECRET_KEY = '54w&e@g)c!c#83y!o3ewy_#qem#110^qf42_5lz5f@rtejgi_r'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["*",]
 
 
 # Application definition
@@ -37,6 +37,13 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+
+    # local apps
+    'quiz.apps.QuizConfig',
+    'api.apps.ApiConfig',
+
+    # DRF
+    'rest_framework',
 ]
 
 MIDDLEWARE = [
