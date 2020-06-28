@@ -6,13 +6,13 @@ from quiz.models import Quiz, Question, Choice
 class QuizSerializer(serializers.ModelSerializer):
     class Meta:
         model = Quiz
-        fields = ('pk', 'title', 'description', 'difficulty')
+        fields = ('pk', 'title', 'description', 'difficulty', 'questions')
 
 
 class QuestionSerializer(serializers.ModelSerializer):
     class Meta:
         model = Question
-        fields = ('pk', 'title', 'description')
+        fields = ('pk', 'title', 'description', 'choices')
 
 
 class ChoiceSecretSerializer(serializers.ModelSerializer):
